@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Strings View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="MAStringsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jl0-PC-Ofe">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="XW0-lT-6jr"/>
+                                    <constraint firstAttribute="height" constant="40" id="vaQ-dD-Ulf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Deal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deal" destination="2" eventType="touchUpInside" id="eSO-Ip-3yO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcG-Un-XY9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="2Wi-IG-4k1"/>
+                                    <constraint firstAttribute="height" constant="21" id="hm3-xu-839"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Flip Count: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGf-vH-UL5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="oEr-gp-pDU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="psx-i6-f25">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="I0U-N8-nAM"/>
+                                    <constraint firstAttribute="width" constant="250" id="z0i-TK-EaV"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="New Game">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWH-Tc-s6t">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="XuQ-CZ-Gva"/>
+                                    <constraint firstAttribute="width" constant="61" id="vqc-vh-1P3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="hKA-LC-aNz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TT1-eB-gCV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="gRn-1L-DSs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="y0z-jv-YXp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="piU-a0-Hmn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="Dae-3M-krs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="eaX-te-xB9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZe-LN-gxS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="m38-qk-DJq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="F45-Gx-Sdr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Vc-Cb-dFQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="fYA-hf-iuJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="3L5-41-lnZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1K-nC-MSV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="2Tb-p5-QAw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4E5-hB-la0">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="YRb-cf-NNO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pw5-f8-fc2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="Lcs-de-Esl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ck7-3h-27a">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Oda-un-zz6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="2qr-xz-nUZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-9v-lQZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="U5n-Dl-z1s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwg-CN-jxK">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="lL1-R6-ajI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wd1-5S-RGe">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="33k-6Q-sje"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8b-1g-U7D">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="53k-al-SK2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="Rbt-Cd-V45"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4y-WC-pwr">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="Raw-jM-zSt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dM3-75-Ll3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="RIJ-iz-iOI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1C-MQ-tYk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="0wb-k9-BGU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sl4-Iq-dau">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="3Tp-m3-kG1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="xZF-0L-CwC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGZ-vD-Vek">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="Zld-8q-2RK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-NH-zQx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="Yvy-Sa-Gzc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoC-OD-LE6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="disabled">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="epi-mu-ImF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Jl0-PC-Ofe" secondAttribute="trailing" constant="8" id="08f-Ty-b3h"/>
+                            <constraint firstAttribute="bottom" secondItem="zcG-Un-XY9" secondAttribute="bottom" constant="7" id="1Qq-JB-EJf"/>
+                            <constraint firstItem="RGZ-vD-Vek" firstAttribute="leading" secondItem="I4y-WC-pwr" secondAttribute="leading" type="default" id="2Gi-aD-r8Y"/>
+                            <constraint firstItem="yoC-OD-LE6" firstAttribute="top" secondItem="k1C-MQ-tYk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4RL-nt-6ud"/>
+                            <constraint firstItem="AWH-Tc-s6t" firstAttribute="top" secondItem="3" secondAttribute="top" constant="9" id="5Pc-e9-vY2"/>
+                            <constraint firstItem="sl4-Iq-dau" firstAttribute="top" secondItem="V8b-1g-U7D" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="65s-cP-paC"/>
+                            <constraint firstAttribute="bottom" secondItem="Jl0-PC-Ofe" secondAttribute="bottom" constant="8" id="6Bf-gA-Eda"/>
+                            <constraint firstItem="ck7-3h-27a" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8K3-Xf-yQK"/>
+                            <constraint firstItem="pw5-f8-fc2" firstAttribute="leading" secondItem="IZe-LN-gxS" secondAttribute="leading" type="default" id="9DT-TC-CuN"/>
+                            <constraint firstItem="zcG-Un-XY9" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9hW-bC-OAt"/>
+                            <constraint firstItem="ck7-3h-27a" firstAttribute="top" secondItem="6Vc-Cb-dFQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Acg-rz-IPC"/>
+                            <constraint firstItem="Wd1-5S-RGe" firstAttribute="leading" secondItem="bwg-CN-jxK" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Ask-PC-Tog"/>
+                            <constraint firstItem="a1K-nC-MSV" firstAttribute="leading" secondItem="TT1-eB-gCV" secondAttribute="leading" type="default" id="Bpm-he-pvu"/>
+                            <constraint firstItem="fbO-NH-zQx" firstAttribute="leading" secondItem="dM3-75-Ll3" secondAttribute="leading" type="default" id="E14-Wz-Bkf"/>
+                            <constraint firstItem="Wd1-5S-RGe" firstAttribute="top" secondItem="pw5-f8-fc2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="EXg-kS-muH"/>
+                            <constraint firstItem="I4y-WC-pwr" firstAttribute="top" secondItem="pqR-9v-lQZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="EZZ-o4-dnT"/>
+                            <constraint firstItem="6Vc-Cb-dFQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FaK-C5-gZx"/>
+                            <constraint firstItem="k1C-MQ-tYk" firstAttribute="leading" secondItem="dM3-75-Ll3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="GBD-WB-fJd"/>
+                            <constraint firstItem="Wd1-5S-RGe" firstAttribute="leading" secondItem="pw5-f8-fc2" secondAttribute="leading" type="default" id="H11-z0-OxN"/>
+                            <constraint firstItem="pw5-f8-fc2" firstAttribute="leading" secondItem="4E5-hB-la0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="H2z-fR-E8P"/>
+                            <constraint firstItem="piU-a0-Hmn" firstAttribute="leading" secondItem="TT1-eB-gCV" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IEO-aw-yKD"/>
+                            <constraint firstItem="bwg-CN-jxK" firstAttribute="leading" secondItem="pqR-9v-lQZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Isg-Be-9Yo"/>
+                            <constraint firstItem="piU-a0-Hmn" firstAttribute="top" secondItem="TT1-eB-gCV" secondAttribute="top" type="default" id="KoX-5C-uHB"/>
+                            <constraint firstItem="pqR-9v-lQZ" firstAttribute="top" secondItem="a1K-nC-MSV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LVU-iT-s2v"/>
+                            <constraint firstItem="TT1-eB-gCV" firstAttribute="top" secondItem="AWH-Tc-s6t" secondAttribute="top" type="default" id="MGq-99-8qU"/>
+                            <constraint firstItem="fbO-NH-zQx" firstAttribute="top" secondItem="dM3-75-Ll3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ngw-zf-uLC"/>
+                            <constraint firstItem="bwg-CN-jxK" firstAttribute="top" secondItem="4E5-hB-la0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PXa-bi-OPV"/>
+                            <constraint firstItem="I4y-WC-pwr" firstAttribute="top" secondItem="V8b-1g-U7D" secondAttribute="top" type="default" id="QRO-Je-Cti"/>
+                            <constraint firstItem="yoC-OD-LE6" firstAttribute="leading" secondItem="k1C-MQ-tYk" secondAttribute="leading" type="default" id="Qdl-n9-XXJ"/>
+                            <constraint firstItem="bwg-CN-jxK" firstAttribute="top" secondItem="pqR-9v-lQZ" secondAttribute="top" type="default" id="Qx4-YZ-TkT"/>
+                            <constraint firstItem="I4y-WC-pwr" firstAttribute="leading" secondItem="pqR-9v-lQZ" secondAttribute="leading" type="default" id="QyF-PQ-w0t"/>
+                            <constraint firstItem="fbO-NH-zQx" firstAttribute="top" secondItem="RGZ-vD-Vek" secondAttribute="top" type="default" id="S1T-YF-AYp"/>
+                            <constraint firstItem="fbO-NH-zQx" firstAttribute="bottom" secondItem="RGZ-vD-Vek" secondAttribute="bottom" type="default" id="ST7-EP-OBm"/>
+                            <constraint firstItem="yoC-OD-LE6" firstAttribute="bottom" secondItem="fbO-NH-zQx" secondAttribute="bottom" type="default" id="STh-0v-VVX"/>
+                            <constraint firstItem="fbO-NH-zQx" firstAttribute="leading" secondItem="RGZ-vD-Vek" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="TA9-zZ-qM7"/>
+                            <constraint firstItem="dM3-75-Ll3" firstAttribute="top" secondItem="bwg-CN-jxK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TiI-oz-MSv"/>
+                            <constraint firstItem="dM3-75-Ll3" firstAttribute="top" secondItem="k1C-MQ-tYk" secondAttribute="top" type="default" id="UkN-G0-d8F"/>
+                            <constraint firstItem="pqR-9v-lQZ" firstAttribute="top" secondItem="ck7-3h-27a" secondAttribute="top" type="default" id="XdS-pe-DwA"/>
+                            <constraint firstItem="I4y-WC-pwr" firstAttribute="leading" secondItem="V8b-1g-U7D" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="YXN-F8-R9q"/>
+                            <constraint firstAttribute="bottom" secondItem="QGf-vH-UL5" secondAttribute="bottom" constant="29" id="Z0U-x8-2Pu"/>
+                            <constraint firstItem="4E5-hB-la0" firstAttribute="top" secondItem="pw5-f8-fc2" secondAttribute="top" type="default" id="ZCf-hw-LtB"/>
+                            <constraint firstItem="psx-i6-f25" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="42" id="ZSD-zX-u4m"/>
+                            <constraint firstItem="a1K-nC-MSV" firstAttribute="leading" secondItem="6Vc-Cb-dFQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ZVr-c2-HEB"/>
+                            <constraint firstItem="bwg-CN-jxK" firstAttribute="leading" secondItem="dM3-75-Ll3" secondAttribute="leading" type="default" id="ak0-2k-3Cm"/>
+                            <constraint firstItem="4E5-hB-la0" firstAttribute="leading" secondItem="a1K-nC-MSV" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="amx-Dc-oAV"/>
+                            <constraint firstItem="Wd1-5S-RGe" firstAttribute="top" secondItem="bwg-CN-jxK" secondAttribute="top" type="default" id="ckJ-Vw-qjQ"/>
+                            <constraint firstItem="yoC-OD-LE6" firstAttribute="leading" secondItem="fbO-NH-zQx" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fXC-SX-wrc"/>
+                            <constraint firstItem="I4y-WC-pwr" firstAttribute="top" secondItem="dM3-75-Ll3" secondAttribute="top" type="default" id="g7b-VY-14v"/>
+                            <constraint firstItem="Wd1-5S-RGe" firstAttribute="trailing" secondItem="pw5-f8-fc2" secondAttribute="trailing" type="default" id="hJ8-rt-Gzb"/>
+                            <constraint firstItem="yoC-OD-LE6" firstAttribute="trailing" secondItem="k1C-MQ-tYk" secondAttribute="trailing" type="default" id="hWs-xM-ehR"/>
+                            <constraint firstItem="V8b-1g-U7D" firstAttribute="top" secondItem="ck7-3h-27a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="huJ-IN-f60"/>
+                            <constraint firstItem="a1K-nC-MSV" firstAttribute="top" secondItem="6Vc-Cb-dFQ" secondAttribute="top" type="default" id="iEG-Ao-aoM"/>
+                            <constraint firstItem="TT1-eB-gCV" firstAttribute="leading" secondItem="AWH-Tc-s6t" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ifT-22-Mxq"/>
+                            <constraint firstItem="4E5-hB-la0" firstAttribute="leading" secondItem="piU-a0-Hmn" secondAttribute="leading" type="default" id="jzA-9v-OOE"/>
+                            <constraint firstItem="k1C-MQ-tYk" firstAttribute="top" secondItem="Wd1-5S-RGe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kO0-zy-EpR"/>
+                            <constraint firstItem="dM3-75-Ll3" firstAttribute="leading" secondItem="I4y-WC-pwr" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="kg5-OV-rms"/>
+                            <constraint firstItem="a1K-nC-MSV" firstAttribute="top" secondItem="TT1-eB-gCV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="l12-uP-lrc"/>
+                            <constraint firstItem="6Vc-Cb-dFQ" firstAttribute="top" secondItem="AWH-Tc-s6t" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="l4T-Fj-c6L"/>
+                            <constraint firstItem="a1K-nC-MSV" firstAttribute="top" secondItem="4E5-hB-la0" secondAttribute="top" type="default" id="ltf-qq-FWT"/>
+                            <constraint firstItem="Wd1-5S-RGe" firstAttribute="leading" secondItem="k1C-MQ-tYk" secondAttribute="leading" type="default" id="mXp-cN-pC1"/>
+                            <constraint firstItem="AWH-Tc-s6t" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mto-FR-w3h"/>
+                            <constraint firstItem="sl4-Iq-dau" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nEp-yw-CUY"/>
+                            <constraint firstItem="IZe-LN-gxS" firstAttribute="leading" secondItem="piU-a0-Hmn" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nYU-x5-C4a"/>
+                            <constraint firstItem="RGZ-vD-Vek" firstAttribute="top" secondItem="I4y-WC-pwr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nm8-sw-abB"/>
+                            <constraint firstItem="piU-a0-Hmn" firstAttribute="top" secondItem="IZe-LN-gxS" secondAttribute="top" type="default" id="nvM-5x-njY"/>
+                            <constraint firstItem="RGZ-vD-Vek" firstAttribute="bottom" secondItem="sl4-Iq-dau" secondAttribute="bottom" type="default" id="oPr-2Y-TqJ"/>
+                            <constraint firstItem="k1C-MQ-tYk" firstAttribute="trailing" secondItem="Wd1-5S-RGe" secondAttribute="trailing" type="default" id="pUW-4H-cAk"/>
+                            <constraint firstItem="QGf-vH-UL5" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pYE-fy-q3S"/>
+                            <constraint firstItem="pw5-f8-fc2" firstAttribute="top" secondItem="IZe-LN-gxS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qHk-tz-RKa"/>
+                            <constraint firstItem="pqR-9v-lQZ" firstAttribute="leading" secondItem="a1K-nC-MSV" secondAttribute="leading" type="default" id="qq9-OU-INw"/>
+                            <constraint firstItem="pw5-f8-fc2" firstAttribute="trailing" secondItem="IZe-LN-gxS" secondAttribute="trailing" type="default" id="qt7-GX-PPU"/>
+                            <constraint firstAttribute="bottom" secondItem="psx-i6-f25" secondAttribute="bottom" constant="63" id="rN9-oK-Y8H"/>
+                            <constraint firstItem="pqR-9v-lQZ" firstAttribute="leading" secondItem="ck7-3h-27a" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="tHE-Me-sx1"/>
+                            <constraint firstItem="4E5-hB-la0" firstAttribute="top" secondItem="piU-a0-Hmn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vh2-qw-wn0"/>
+                            <constraint firstItem="RGZ-vD-Vek" firstAttribute="leading" secondItem="sl4-Iq-dau" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wgf-8i-Dgv"/>
+                            <constraint firstItem="RGZ-vD-Vek" firstAttribute="top" secondItem="sl4-Iq-dau" secondAttribute="top" type="default" id="wyw-ji-xQg"/>
+                            <constraint firstItem="V8b-1g-U7D" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="y2y-Ch-icO"/>
+                            <constraint firstItem="yoC-OD-LE6" firstAttribute="top" secondItem="fbO-NH-zQx" secondAttribute="top" type="default" id="ygV-1T-iqK"/>
+                            <constraint firstItem="bwg-CN-jxK" firstAttribute="leading" secondItem="4E5-hB-la0" secondAttribute="leading" type="default" id="zKc-KI-5TO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flipCountLabel" destination="QGf-vH-UL5" id="OJ3-Eu-KfA"/>
+                        <outlet property="lastPlayLabel" destination="psx-i6-f25" id="4jj-Tp-M3A"/>
+                        <outlet property="scoreLabel" destination="zcG-Un-XY9" id="05R-Gk-ahj"/>
+                        <outletCollection property="cardButtons" destination="4E5-hB-la0" id="zpO-ql-T5g"/>
+                        <outletCollection property="cardButtons" destination="AWH-Tc-s6t" id="yPW-Gv-Y5E"/>
+                        <outletCollection property="cardButtons" destination="TT1-eB-gCV" id="9Xk-Vh-6HX"/>
+                        <outletCollection property="cardButtons" destination="piU-a0-Hmn" id="WBR-yW-2JM"/>
+                        <outletCollection property="cardButtons" destination="IZe-LN-gxS" id="vTU-sv-BtD"/>
+                        <outletCollection property="cardButtons" destination="pw5-f8-fc2" id="ysr-09-lHL"/>
+                        <outletCollection property="cardButtons" destination="6Vc-Cb-dFQ" id="s21-mk-qMx"/>
+                        <outletCollection property="cardButtons" destination="a1K-nC-MSV" id="pGg-db-8xr"/>
+                        <outletCollection property="cardButtons" destination="ck7-3h-27a" id="gf0-vt-ZBN"/>
+                        <outletCollection property="cardButtons" destination="pqR-9v-lQZ" id="O1G-D0-h0a"/>
+                        <outletCollection property="cardButtons" destination="bwg-CN-jxK" id="f0i-3e-pay"/>
+                        <outletCollection property="cardButtons" destination="V8b-1g-U7D" id="yHb-KG-tCH"/>
+                        <outletCollection property="cardButtons" destination="I4y-WC-pwr" id="xQG-xM-oy4"/>
+                        <outletCollection property="cardButtons" destination="dM3-75-Ll3" id="JfB-Pw-atp"/>
+                        <outletCollection property="cardButtons" destination="k1C-MQ-tYk" id="VXK-CF-oYg"/>
+                        <outletCollection property="cardButtons" destination="sl4-Iq-dau" id="xHZ-G9-cWF"/>
+                        <outletCollection property="cardButtons" destination="RGZ-vD-Vek" id="Omm-cm-pd7"/>
+                        <outletCollection property="cardButtons" destination="fbO-NH-zQx" id="jDV-9J-mhB"/>
+                        <outletCollection property="cardButtons" destination="yoC-OD-LE6" id="136-lZ-6vK"/>
+                        <outletCollection property="cardButtons" destination="Wd1-5S-RGe" id="7zw-Po-ZqU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-443" y="-491"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="MAStringsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MAStringsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="flipCountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lastPlayLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outletCollection" name="cardButtons" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
